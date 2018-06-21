@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Quote Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+        <link rel="stylesheet" type="text/css" href="../css/quotes.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Playfair+Display" rel="stylesheet">
+    </head>
+    
+    <body> 
+        <section class="bgimage"> <!-- hero container -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="display-5 text-center">Welcome to the Quote Generator!</h1>
+                        <p id="lead" class="lead">Choose between the <a href="#random">Random Quote 
+                            of the Day</a><br>or the <a href="#custom">Custom Quote Generator.</a></p>
+                            <a href="#random"><button type="button" class="btn btn-primary">Get started</button></a>    
+                    </div>
+                </div>
+            </div> 
+        </section>
+        
+        <div class="container"> <!-- main body container -->
+                
+            <div id="random" class="mt-5 p-5"> <!-- random quote -->
+                <h2 class="mb-5 mt-5 text-center">Random Quote of the Day</h2>
+                <div id="randomQuoteParagraph" class="mt-5 mb-5 font-italic text-center"></div> <!-- div for <p> insert with random quote -->
+                <div class="text-center mt-5" > <!-- button div -->
+                    <button id="randomButton" value="Generate" type="button" class="btn btn-primary btn-sm">Show me more!</button>
+                    <button id="resetButton1" value="reset" type="button" class="btn btn-secondary btn-sm">Clear</button>
+                </div>         
+            </div>
+            
+            <div id="custom" class="p-5"> <!-- custom quotes -->
+                <h2 class="mb-5 mt-5 text-center">Custom Quote Generator</h2>
+                <form id="form">
+                    <div class="row"> <!-- form row -->
+                        
+                        <div class="form-group col-sm-12 col-md-6 mb-5 mt-5"> <!-- quote type dropdown -->
+                            <label for="quoteType">Choose the type of quote you prefer:</label>
+                            <select class="form-control" name="quoteType" id="quoteType">
+                                <option disabled selected value> -- select an option -- </option>
+                                <option value="0">Famous Quote(s)</option>
+                                <option value="1">Motivational Quote(s)</option>
+                            </select>
+                            <div id="typeHelp" class="mt-3"></div> <!-- helper text quote type -->
+                        </div>  
+
+                        <div class="form-group col-sm-12 col-md-6 mb-5 mt-5"> <!-- quote number dropdown -->
+                            <label for="number">Choose the amount of quotes you'd like to generate:</label>
+                            <select class="form-control" name="number" id="number">
+                                <option disabled selected value> -- select an option -- </option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <div id="numberHelp" class="mt-3"></div> <!-- helper text quote number -->
+                        </div>
+                    
+                    </div> <!-- end form row -->
+                    
+                    <div id="customMessageParagraph" class="mt-3 mb-5 text-center"></div> <!-- div for <p> insert with message -->
+                    <div id="customQuoteParagraph" class="mt-5 mb-5 font-italic text-center"></div> <!-- div for <p> insert with custom quote -->
+                    
+                    <div class="text-center"> <!-- button div -->
+                        <button id="generateButton" value="generate" type="button" class="btn btn-primary btn-sm">Generate</button>
+                        <button id="resetButton" value="reset" type="button" class="btn btn-secondary btn-sm">Clear</button>
+                    </div>
+                </form> <!-- end form -->
+            </div>  <!-- end custom quotes -->    
+        </div> <!-- end main body container -->
+
+        <footer class="mt-5">    
+        </footer>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="../js/quotes.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
